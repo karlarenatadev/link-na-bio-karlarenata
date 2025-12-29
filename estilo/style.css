@@ -1,0 +1,138 @@
+:root {
+    --bg-color: #C5C6EF; /* Lavanda do fundo */
+    --button-color: #F5D1C3; /* Pêssego dos botões */
+    --text-dark: #1A1A1A;
+    --accent-gold: #D4AF37; /* Dourado para detalhes */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Header e Imagem de Perfil */
+.header {
+    position: relative;
+    height: 250px;
+}
+
+.header-bg {
+    height: 200px;
+    background: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=500') center/cover;
+    filter: brightness(0.8);
+}
+
+.profile-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profile-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5); /* Efeito dourado */
+    object-fit: cover;
+}
+
+/* Texto */
+.content {
+    padding: 20px;
+}
+
+.name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+.subtitle {
+    color: #8B735B; /* Tom de dourado/bronze */
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+/* Botões */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.link-button {
+    background-color: var(--button-color);
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.link-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 2px 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Social */
+.social-icons {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-icons i {
+    font-size: 2rem;
+    color: #1A1A1A;
+    transition: opacity 0.3s;
+}
+
+.social-icons i:hover {
+    opacity: 0.7;
+}
+
+/* Decoração do Rodapé (Sparkles) */
+.container::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+    pointer-events: none;
+}
