@@ -94,6 +94,7 @@ body {
     background-color: var(--button-color);
     color: var(--text-dark);
     text-decoration: none;
+    letter-spacing: 1px;
     padding: 18px;
     border-radius: 8px;
     font-weight: 600;
